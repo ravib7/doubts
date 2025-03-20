@@ -7,6 +7,7 @@ const path = require("path")
 
 const app = express()
 
+app.use(express.static("dist"))
 app.use(express.json())
 app.use(cors({ origin: "http://localhost:5173", credentials: true }))
 app.use(cookieParser())
